@@ -1,22 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Mental Wellness - MindSpace</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
- 
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    /* Fix hero section visibility */
+    .info-hero {
+      padding-top: 120px !important;
+      min-height: 60vh !important;
+    }
+    
+    /* Better section spacing */
+    .wellness-intro {
+      padding: 80px 0;
+    }
+    
+    .pillar-card {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+    
+    .pillar-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .pillar-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 2rem;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand gradient-text" href="index.html">
         <i class="bi bi-heart-pulse me-2"></i>MindSpace
       </a>
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -32,122 +67,204 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="info-hero">
+  <!-- Hero Section - Simplified -->
+  <section class="info-hero gradient-bg">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-8 mx-auto text-center">
+      <div class="row align-items-center justify-content-center text-center">
+        <div class="col-lg-10">
           <div class="animate-fade-in-up">
-            <h1 class="display-4 fw-bold mb-4">Understanding Mental Wellness</h1>
-            <p class="lead mb-0">Discover the science, insights, and vision behind MindSpace's commitment to mental health and community support</p>
+            <h1 class="display-4 fw-bold mb-4 text-white">Understanding Mental Wellness</h1>
+            <p class="lead mb-4 text-white">Discover the science, insights, and vision behind MindSpace's commitment to mental health and community support</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+              <button class="btn btn-outline-light btn-lg" data-bs-toggle="offcanvas" data-bs-target="#aboutOffcanvas">
+                <i class="bi bi-info-circle me-2"></i>Quick Overview
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Main Content Section -->
-  <section class="info-section">
+  <!-- Three Pillars Section - Replacing Carousel -->
+  <section class="wellness-intro bg-light">
     <div class="container">
-      <div class="section-header animate-fade-in-up">
-        <h2>Knowledge & Insights</h2>
-        <p>Evidence-based information and future developments that drive our mental wellness platform</p>
+      <div class="text-center mb-5">
+        <h2 class="section-title gradient-text mb-4">Our Mental Wellness Journey</h2>
+        <p class="section-subtitle mb-5">MindSpace provides comprehensive support through three key pillars of mental wellness</p>
       </div>
+      
       <div class="row g-4">
-        <div class="col-lg-4 animate-fade-in-up" style="animation-delay: 0.1s;">
-          <div class="info-card">
-            <div class="info-icon">
-              <i class="bi bi-lightbulb"></i>
+        <div class="col-lg-4">
+          <div class="pillar-card shadow-hover">
+            <div class="pillar-icon bg-primary bg-opacity-10">
+              <i class="bi bi-peace text-primary"></i>
             </div>
-            <h3>Mental Health Insights</h3>
-            <p>
-              Mental health affects 1 in 4 people globally, yet stigma often prevents seeking help. 
-              Our platform creates safe spaces where individuals can explore their mental wellness 
-              journey without judgment.
-            </p>
-            <p>
-              Research shows that peer support and community connection are crucial factors in 
-              mental health recovery and maintenance. Studies indicate that regular mood tracking 
-              can improve self-awareness by up to 40%.
-            </p>
-            <p>
-              Digital mental health platforms have shown to reduce symptoms of anxiety and 
-              depression by 25-30% when used consistently with community support.
-            </p>
+            <h3 class="h4 mb-3">Mindfulness</h3>
+            <p class="text-muted">Discover mindfulness practices that work for you. From guided meditation to breathing exercises, find your path to inner peace and mental clarity.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pillar-card shadow-hover">
+            <div class="pillar-icon bg-success bg-opacity-10">
+              <i class="bi bi-people text-success"></i>
+            </div>
+            <h3 class="h4 mb-3">Community</h3>
+            <p class="text-muted">Join our caring community of wellness seekers. Share experiences, find support, and connect with others who understand your journey.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pillar-card shadow-hover">
+            <div class="pillar-icon bg-info bg-opacity-10">
+              <i class="bi bi-graph-up text-info"></i>
+            </div>
+            <h3 class="h4 mb-3">Growth</h3>
+            <p class="text-muted">Monitor your wellness journey and celebrate growth. Track patterns, set goals, and visualize your progress toward better mental health.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Section with Bootstrap Tabs -->
+  <section id="insights" class="info-section py-5">
+    <div class="container">
+      <div class="section-header animate-fade-in-up text-center mb-5">
+        <h2 class="section-title gradient-text">Knowledge & Insights</h2>
+        <p class="section-subtitle">Evidence-based information and future developments that drive our mental wellness platform</p>
+      </div>
+      
+      <!-- Bootstrap Tabs for Better Organization -->
+      <ul class="nav nav-tabs justify-content-center mb-5" id="infoTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="insights-tab" data-bs-toggle="tab" data-bs-target="#insights-content" type="button" role="tab">
+            <i class="bi bi-lightbulb me-2"></i>Insights
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="future-tab" data-bs-toggle="tab" data-bs-target="#future" type="button" role="tab">
+            <i class="bi bi-rocket-takeoff me-2"></i>Future
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="research-tab" data-bs-toggle="tab" data-bs-target="#research" type="button" role="tab">
+            <i class="bi bi-bar-chart me-2"></i>Research
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="infoTabContent">
+        <!-- Insights Tab -->
+        <div class="tab-pane fade show active" id="insights-content" role="tabpanel">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="info-card shadow-hover">
+                <div class="info-icon">
+                  <i class="bi bi-lightbulb"></i>
+                </div>
+                <h3>Mental Health Insights</h3>
+                <p>Mental health affects 1 in 4 people globally, yet stigma often prevents seeking help. Our platform creates safe spaces where individuals can explore their mental wellness journey without judgment.</p>
+                <p>Research shows that peer support and community connection are crucial factors in mental health recovery and maintenance. Studies indicate that regular mood tracking can improve self-awareness by up to 40%.</p>
+                <p>Digital mental health platforms have shown to reduce symptoms of anxiety and depression by 25-30% when used consistently with community support.</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="col-lg-4 animate-fade-in-up" style="animation-delay: 0.2s;">
-          <div class="info-card">
-            <div class="info-icon">
-              <i class="bi bi-rocket-takeoff"></i>
+        <!-- Future Tab -->
+        <div class="tab-pane fade" id="future" role="tabpanel">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="info-card shadow-hover">
+                <div class="info-icon">
+                  <i class="bi bi-rocket-takeoff"></i>
+                </div>
+                <h3>Future Developments</h3>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <ul class="list-unstyled">
+                      <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>AI-powered mood pattern analysis</li>
+                      <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Wearable device integration</li>
+                      <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>VR meditation experiences</li>
+                      <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Enhanced peer matching</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="list-unstyled">
+                      <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Professional therapist booking</li>
+                      <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Multilingual support</li>
+                      <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Crisis intervention features</li>
+                      <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Gamification elements</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3>Future Developments</h3>
-            <ul>
-              <li>AI-powered mood pattern analysis and personalized insights</li>
-              <li>Integration with wearable devices for holistic wellness tracking</li>
-              <li>Virtual reality meditation and mindfulness experiences</li>
-              <li>Enhanced peer support matching based on shared experiences</li>
-              <li>Professional therapist integration and booking system</li>
-              <li>Multilingual support to reach global communities</li>
-              <li>Advanced crisis intervention and emergency support features</li>
-              <li>Gamification elements to encourage consistent engagement</li>
-            </ul>
           </div>
         </div>
 
-        <div class="col-lg-4 animate-fade-in-up" style="animation-delay: 0.3s;">
-          <div class="info-card">
-            <div class="info-icon">
-              <i class="bi bi-bar-chart"></i>
+        <!-- Research Tab -->
+        <div class="tab-pane fade" id="research" role="tabpanel">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="info-card shadow-hover">
+                <div class="info-icon">
+                  <i class="bi bi-bar-chart"></i>
+                </div>
+                <h3>Research & Statistics</h3>
+                <p>Recent studies reveal that digital mental health platforms can significantly improve user outcomes when combined with community-based approaches.</p>
+                <p>Community-based approaches show higher success rates, with peer support increasing treatment adherence by up to 50%. Our data shows that users who engage with mood tracking for just 30 days report significant improvements.</p>
+                <p>The power of community connection cannot be understated in mental wellness. Users in supportive communities show 60% better long-term engagement with their mental health journey.</p>
+              </div>
             </div>
-            <h3>Research & Statistics</h3>
-            <p>
-              Recent studies reveal that digital mental health platforms can significantly 
-              improve user outcomes when combined with community-based approaches.
-            </p>
-            <p>
-              Community-based approaches show higher success rates, with peer support 
-              increasing treatment adherence by up to 50%. Our data shows that users who 
-              engage with mood tracking for just 30 days report significant improvements.
-            </p>
-            <p>
-              The power of community connection cannot be understated in mental wellness. 
-              Users in supportive communities show 60% better long-term engagement with 
-              their mental health journey.
-            </p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title gradient-text">What Our Community Says</h2>
+        <p class="section-subtitle">Real stories from people who've found support through MindSpace</p>
+        <button class="dynamic-btn" onclick="TestimonialsManager.loadTestimonials()">
+          <i class="bi bi-chat-heart me-2"></i>Load Community Reviews
+        </button>
+      </div>
+      <div class="row" id="testimonialsContainer">
+        <!-- Testimonials will be added here dynamically -->
       </div>
     </div>
   </section>
 
   <!-- Stats Section -->
-  <section class="insight-stats">
+  <section class="stats gradient-bg">
     <div class="container">
       <div class="row">
         <div class="col-6 col-md-3">
-          <div class="insight-stat animate-fade-in-up">
-            <span class="insight-stat-number">25%</span>
-            <div class="insight-stat-label">Reduction in Anxiety Symptoms</div>
+          <div class="stat-item animate-fade-in-up">
+            <span class="stat-number gradient-text">25%</span>
+            <div class="stat-label">Reduction in Anxiety</div>
           </div>
         </div>
         <div class="col-6 col-md-3">
-          <div class="insight-stat animate-fade-in-up" style="animation-delay: 0.1s;">
-            <span class="insight-stat-number">89%</span>
-            <div class="insight-stat-label">User Satisfaction Rate</div>
+          <div class="stat-item animate-fade-in-up">
+            <span class="stat-number gradient-text">89%</span>
+            <div class="stat-label">User Satisfaction</div>
           </div>
         </div>
         <div class="col-6 col-md-3">
-          <div class="insight-stat animate-fade-in-up" style="animation-delay: 0.2s;">
-            <span class="insight-stat-number">50%</span>
-            <div class="insight-stat-label">Improved Self-Awareness</div>
+          <div class="stat-item animate-fade-in-up">
+            <span class="stat-number gradient-text">50%</span>
+            <div class="stat-label">Improved Awareness</div>
           </div>
         </div>
         <div class="col-6 col-md-3">
-          <div class="insight-stat animate-fade-in-up" style="animation-delay: 0.3s;">
-            <span class="insight-stat-number">24/7</span>
-            <div class="insight-stat-label">Community Support</div>
+          <div class="stat-item animate-fade-in-up">
+            <span class="stat-number gradient-text">24/7</span>
+            <div class="stat-label">Community Support</div>
           </div>
         </div>
       </div>
@@ -155,11 +272,11 @@
   </section>
 
   <!-- CTA Section -->
-  <section class="cta-section">
+  <section class="cta-section gradient-bg">
     <div class="container text-center">
       <h2 class="animate-fade-in-up">Ready to start your wellness journey?</h2>
-      <p class="animate-fade-in-up" style="animation-delay: 0.1s;">Join our community and discover the tools you need for better mental health</p>
-      <a href="form.html" class="btn btn-primary-custom animate-fade-in-up" style="animation-delay: 0.2s;">
+      <p class="animate-fade-in-up">Join our community and discover the tools you need for better mental health</p>
+      <a href="form.html" class="btn btn-primary-custom animate-fade-in-up hover-lift">
         <i class="bi bi-arrow-right me-2"></i>Get Started Today
       </a>
     </div>
@@ -170,70 +287,117 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4 mb-4">
-          <div class="footer-brand">
+          <div class="footer-brand gradient-text">
             <i class="bi bi-heart-pulse me-2"></i>MindSpace
           </div>
           <p class="text-muted">Empowering mental wellness through community, technology, and compassionate support.</p>
           <div class="social-links mt-3">
-            <a href="#"><i class="bi bi-twitter"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
           </div>
         </div>
-        <div class="col-lg-2 col-md-6 mb-4">
-          <h6 class="text-white mb-3">Platform</h6>
-          <div class="footer-links">
-            <div><a href="#">Features</a></div>
-            <div><a href="#">Pricing</a></div>
-            <div><a href="#">Resources</a></div>
-            <div><a href="#">API</a></div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-6 mb-4">
-          <h6 class="text-white mb-3">Support</h6>
-          <div class="footer-links">
-            <div><a href="#">Help Center</a></div>
-            <div><a href="#">Community</a></div>
-            <div><a href="#">Contact</a></div>
-            <div><a href="#">Crisis Support</a></div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-6 mb-4">
-          <h6 class="text-white mb-3">Company</h6>
-          <div class="footer-links">
-            <div><a href="#">About</a></div>
-            <div><a href="#">Blog</a></div>
-            <div><a href="#">Careers</a></div>
-            <div><a href="#">Press</a></div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-6 mb-4">
-          <h6 class="text-white mb-3">Legal</h6>
-          <div class="footer-links">
-            <div><a href="#">Privacy</a></div>
-            <div><a href="#">Terms</a></div>
-            <div><a href="#">Security</a></div>
-            <div><a href="#">Cookies</a></div>
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-6 col-md-3 mb-4">
+              <h6 class="text-white mb-3">Platform</h6>
+              <div class="footer-links">
+                <a href="#">Features</a>
+                <a href="#">Resources</a>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+              <h6 class="text-white mb-3">Support</h6>
+              <div class="footer-links">
+                <a href="#">Help Center</a>
+                <a href="#">Contact</a>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+              <h6 class="text-white mb-3">Company</h6>
+              <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+              <h6 class="text-white mb-3">Legal</h6>
+              <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <hr class="my-4" style="border-color: #334155;" />
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <p class="text-muted mb-0">&copy; 2025 MindSpace. All rights reserved.</p>
-        </div>
-        <div class="col-md-6 text-md-end">
-          <p class="text-muted mb-0">Made with ❤️ for mental wellness</p>
-        </div>
+      <hr class="my-4 border-secondary">
+      <div class="text-center">
+        <p class="text-muted mb-0">&copy; 2025 MindSpace. All rights reserved. Made with ❤️ for mental wellness</p>
       </div>
     </div>
   </footer>
 
+  <!-- Offcanvas Component -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="aboutOffcanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title gradient-text">About MindSpace</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="mb-4">
+        <h6 class="fw-bold">Our Mission</h6>
+        <p class="small">MindSpace exists to break down barriers to mental health support and create a world where everyone feels comfortable prioritizing their mental wellness.</p>
+      </div>
+      
+      <div class="mb-4">
+        <h6 class="fw-bold">Key Features:</h6>
+        <ul class="small">
+          <li>Daily mood tracking with insights</li>
+          <li>Personalized wellness tips</li>
+          <li>Supportive community forums</li>
+          <li>Professional resources and guidance</li>
+          <li>24/7 crisis support access</li>
+        </ul>
+      </div>
+      
+      <div class="mb-4">
+        <h6 class="fw-bold">Our Impact</h6>
+        <div class="row text-center">
+          <div class="col-6">
+            <div class="h5 text-primary">2,500+</div>
+            <small>Users Helped</small>
+          </div>
+          <div class="col-6">
+            <div class="h5 text-success">95%</div>
+            <small>Satisfaction</small>
+          </div>
+        </div>
+      </div>
+      
+      <div class="d-grid">
+        <a href="form.html" class="btn btn-primary">Join Our Community</a>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- External JS -->
   <script src="script.js"></script>
+  
+  <!-- Initialize Advanced Components -->
+  <script>
+    // Dynamic accordion population for tips
+    document.addEventListener('DOMContentLoaded', function() {
+      const accordionButton = document.querySelector('[data-bs-target="#allTipsAccordion"]');
+      if (accordionButton) {
+        accordionButton.addEventListener('click', function() {
+          if (document.getElementById('tipsAccordion').children.length === 0) {
+            TipsManager.renderAllTipsAccordion();
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
